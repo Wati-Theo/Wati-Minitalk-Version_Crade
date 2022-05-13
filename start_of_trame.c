@@ -6,7 +6,7 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 19:52:32 by tschlege          #+#    #+#             */
-/*   Updated: 2022/05/09 19:52:33 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2022/05/10 14:22:05 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ void	decimal_to_binary(t_trame *trame, int n, int choice)
 	while (n)
 	{
 		rem = n % 2;
-		// printf ("rem: %d place: %d, n: %d\n", rem, place, n);
 		n = n / 2;
 		bin = bin + (place * rem);
 		place = place * 10;
@@ -58,10 +57,9 @@ void	decimal_to_binary(t_trame *trame, int n, int choice)
 		i++;
 	}
 	trame->byte_mssg[i] = 0;
-	// reverse_tab(trame, i);
 	fill_byte(trame, choice);
 	reverse_str(trame, choice);
-	printf("char_bin: %s\n", trame->byte_mssg);
+	printf("char_bin: $%s$\n", trame->byte_mssg);
 	printf("bin: %d\n", bin);
 	send_msg(trame);
 }
@@ -69,12 +67,15 @@ void	decimal_to_binary(t_trame *trame, int n, int choice)
 void	start_of_trame(t_trame *trame)
 {
 	int	i;
+
+	i = 0;
 	trame->current_bit = 0;
-	
-	// i = -1;
-	// while (++i < 32)
-	// {
-	// 	printf("%c", (trame->msg_len>>(31 - i)) & 1 + '0');
-	// }
-	decimal_to_binary(trame, trame->msg_len, 2);
+	// decimal_to_binary(trame, trame->msg_len, 2);
+	while (i < 32)//trame->msg_len)
+	{
+		printf("%d ", (trame->msg_len>>(31 - i)) & 1);
+		// trame->current_bit = 0;
+		// decimal_to_binary(trame, trame->msg[i], 1);
+		i++;
+	}
 }

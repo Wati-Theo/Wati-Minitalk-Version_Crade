@@ -6,7 +6,7 @@
 /*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 19:51:16 by tschlege          #+#    #+#             */
-/*   Updated: 2022/05/09 19:51:17 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2022/05/10 11:37:29 by tschlege         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@
 
 typedef struct s_msg {
 	int		msg_len;
-	int 	current_read_byte;
+	int 	current_read_trame_byte;
+	int 	current_read_char_byte;
 	char	*msg;
 }	t_msg;
 
