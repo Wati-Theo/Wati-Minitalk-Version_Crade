@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   lib.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: Wati-Theo <wati-theo@protonmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 19:51:36 by tschlege          #+#    #+#             */
-/*   Updated: 2022/05/09 19:51:43 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2022/05/17 02:48:35 by Wati-Theo        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ void	reverse_str(t_trame *trame, int choice)
 	i = 0;
 	size = 30;
 	if (choice == 1)
-		size = 8;
+		size = 7;
 	j = size;
 	tmp = ft_strdup(trame->byte_mssg);
 	while (size + 1)
@@ -93,4 +93,5 @@ void	reverse_str(t_trame *trame, int choice)
 		i++;
 		size--;
 	}
+	free(tmp);
 }

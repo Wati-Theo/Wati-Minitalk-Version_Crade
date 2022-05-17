@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   client.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: Wati-Theo <wati-theo@protonmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 19:50:13 by tschlege          #+#    #+#             */
-/*   Updated: 2022/05/09 19:50:14 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2022/05/17 03:16:15 by Wati-Theo        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	send_msg(t_trame *trame)
 	i = 0;
 	while (trame->byte_mssg[i])
 	{
-		usleep(50);
+		usleep(400);
 		if (trame->byte_mssg[i] == '0')
 			kill(trame->pid, SIGUSR1);
 		if (trame->byte_mssg[i] == '1')

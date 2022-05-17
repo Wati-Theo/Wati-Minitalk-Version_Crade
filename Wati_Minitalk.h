@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Wati_Minitalk.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: Wati-Theo <wati-theo@protonmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 19:51:16 by tschlege          #+#    #+#             */
-/*   Updated: 2022/05/13 16:43:30 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2022/05/17 03:25:23 by Wati-Theo        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

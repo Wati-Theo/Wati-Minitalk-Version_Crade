@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   start_of_trame.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tschlege <tschlege@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: Wati-Theo <wati-theo@protonmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 19:52:32 by tschlege          #+#    #+#             */
-/*   Updated: 2022/05/10 14:22:05 by tschlege         ###   ########lyon.fr   */
+/*   Updated: 2022/05/17 02:45:57 by Wati-Theo        ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,13 +69,18 @@ void	start_of_trame(t_trame *trame)
 	int	i;
 
 	i = 0;
-	trame->current_bit = 0;
-	// decimal_to_binary(trame, trame->msg_len, 2);
-	while (i < 32)//trame->msg_len)
+	decimal_to_binary(trame, trame->msg_len, 2);
+	while(i < trame->msg_len)
 	{
-		printf("%d ", (trame->msg_len>>(31 - i)) & 1);
-		// trame->current_bit = 0;
-		// decimal_to_binary(trame, trame->msg[i], 1);
+		decimal_to_binary(trame, trame->msg[i], 1);
 		i++;
 	}
+	// les incantations d'antoine
+	// while (i < 32)//trame->msg_len)
+	// {
+	// 	printf("%d ", (trame->msg_len>>(31 - i)) & 1);
+	// 	// trame->current_bit = 0;
+	// 	// decimal_to_binary(trame, trame->msg[i], 1);
+	// 	i++;
+	// }
 }
